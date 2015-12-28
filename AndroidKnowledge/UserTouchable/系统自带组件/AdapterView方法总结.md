@@ -18,3 +18,11 @@ AdapterView是一个抽象类，直接继承自ViewGroup类。但是有好几个
 - performItemClick(View,position,id)，自动执行一次点击动作；
 - getSelectedView,getSelectedItem,getSelectedItemPosition,getSelectedItemId
 - setSelection设置选中
+
+
+关于AdapterView中用到的Adapter
+
+[android中Baseadapter的 getItem 和 getItemId 的作用和重写](http://www.2cto.com/kf/201405/299601.html)<br>
+[ListView之BaseAdapter的基本使用以及ViewHolder模式](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2014/1021/1815.html)
+
+[BaseAdapter重写模板](E:\Android\MyCodes\MyLaboratory\DemoCollection\AdapterView.md)
