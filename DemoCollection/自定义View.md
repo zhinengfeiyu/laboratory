@@ -1,5 +1,5 @@
-    
-    //如果自定义的组件继承自View，而不是其他现成的Widget，最好重写onMeasure()方法。
+如果自定义的组件继承自View，而不是其他现成的Widget，最好重写onMeasure()方法。
+
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
     
@@ -41,3 +41,10 @@
         //MUST CALL THIS
         setMeasuredDimension(width, height);
     }
+
+在代码中设置某个尺寸，且尺寸的单位不是px：
+
+    TextView text = new TextView(getActivity());
+    int padding = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+            4, getActivity().getResources().getDisplayMetrics());
+    text.setPadding(padding, padding, padding, padding);

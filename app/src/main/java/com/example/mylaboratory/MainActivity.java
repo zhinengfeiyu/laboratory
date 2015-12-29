@@ -22,6 +22,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.mylaboratory.FragmentTest.FragmentTestMainActivity;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -59,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
         classList.add(GridViewTestActivity.class);
         btnTitleList.add("Style测试");
         classList.add(StyleTestActivity.class);
+        btnTitleList.add("Fragment测试");
+        classList.add(FragmentTestMainActivity.class);
     }
 
     private class GridAdapter extends BaseAdapter {
