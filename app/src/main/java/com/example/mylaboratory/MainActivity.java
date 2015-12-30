@@ -23,6 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mylaboratory.FragmentTest.FragmentTestMainActivity;
+import com.example.mylaboratory.FragmentTest.FragmentTestMeActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         btnTitleList.add("Style测试");
         classList.add(StyleTestActivity.class);
         btnTitleList.add("Fragment测试");
-        classList.add(FragmentTestMainActivity.class);
+        classList.add(FragmentTestMeActivity.class);
     }
 
     private class GridAdapter extends BaseAdapter {

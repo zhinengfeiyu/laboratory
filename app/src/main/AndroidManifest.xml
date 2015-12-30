@@ -25,6 +25,7 @@
         <activity android:name=".StyleTestActivity" />
         <activity android:name=".FragmentTest.FragmentTestMainActivity" />
         <activity android:name=".FragmentTest.FragmentTestMainActivity$FragmentTestDetailsActivity" />
+        <activity android:name=".FragmentTest.FragmentTestMeActivity" />
 
     </application>
 
