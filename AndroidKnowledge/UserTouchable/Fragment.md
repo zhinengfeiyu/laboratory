@@ -2,20 +2,27 @@
 
 Fragment与Activity的生命周期关系：<br>
 刚打开Activity：<br>
-    Fragment onAttach > Fragment onCreate > Fragment onCreateView > Activity onCreate > Fragment onActivityCreated > Activity onStart > Fragment onStart > Activity onResume > Fragment onResume <br>
+    Fragment onAttach > Fragment onCreate > Fragment onCreateView <br>
+    > Activity onCreate > Fragment onActivityCreated <br>
+    > Activity onStart > Fragment onStart > <br>
+    Activity onResume > Fragment onResume <br>
 关闭Activity：<br>
-    Fragment onPause > Activity onPause > Fragment onStop > Activity onStop > Fragment onDestroyView > Fragment onDestroy > Fragment onDetach > Activity onDestroy
+    Fragment onPause > Activity onPause <br>
+    > Fragment onStop > Activity onStop <br>
+    > Fragment onDestroyView > Fragment onDestroy > Fragment onDetach > Activity onDestroy <br>
 进入下一个Activity：<br>
-    Fragment onPause > Activity onPause > Fragment onStop > Activity onStop <br>
+    Fragment onPause > Activity onPause <br>
+    > Fragment onStop > Activity onStop <br>
 返回到当前Activity：<br>
-    Activity onRestart > Activity onStart > Fragment onStart > Activity onResume > Fragment onResume <br>
+    Activity onRestart > Activity onStart > Fragment onStart <br>
+    > Activity onResume > Fragment onResume <br>
 添加Fragment：<br>
     onCreate > onCreateView > onActivityCreated > onStart > onResume <br>
 Fragment添加后是否加入返回栈，生命周期都一样，pop即完全移除到onDetach <br>
 移除Fragment（未添加到返回栈）：<br>
     onPause > onStop > onDestroyView > onDestroy > onDetach <br>
 移除Fragment（添加到返回栈）：<br>
-    onPause > onStop > onDestroyView
+    onPause > onStop > onDestroyView <br>
 使用popBackStack恢复移除的Fragment：<br>
     onCreateView > onActivityCreated > onStart > onResume <br>
 

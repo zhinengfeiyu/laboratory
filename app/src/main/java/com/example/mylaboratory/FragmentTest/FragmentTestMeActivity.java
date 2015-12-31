@@ -31,6 +31,7 @@ public class FragmentTestMeActivity extends Activity {
             public void onClick(View v) {
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
+                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
                 ft.addToBackStack(null);
                 Fragment fragment = fm.findFragmentByTag("this fragment");
                 ft.remove(fragment);
@@ -42,6 +43,7 @@ public class FragmentTestMeActivity extends Activity {
             public void onClick(View v) {
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
+                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
                 Fragment fragment = new MyTestFragment();
                 ft.add(R.id.container,fragment,"this fragment");
                 ft.addToBackStack(null);
