@@ -11,7 +11,8 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,9 +24,12 @@
         <activity android:name=".PullToRefreshListViewTestActivity" />
         <activity android:name=".ShapeTestActivity" />
         <activity android:name=".StyleTestActivity" />
-        <activity android:name=".FragmentTest.FragmentTestMainActivity" />
+        <activity
+            android:name=".FragmentTest.FragmentTestMainActivity" />
         <activity android:name=".FragmentTest.FragmentTestMainActivity$FragmentTestDetailsActivity" />
         <activity android:name=".FragmentTest.FragmentTestMeActivity" />
+        <activity
+            android:name=".RegexTestActivity" />
 
     </application>
 

@@ -18,6 +18,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.NumberPicker;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -49,6 +50,12 @@ public class MainActivity extends AppCompatActivity {
         gridView.setAdapter(new GridAdapter(this));
     }
 
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Toast.makeText(this, "MainActivity onNewIntent", Toast.LENGTH_LONG).show();
+    }
+
     private void initList() {
         btnTitleList = new ArrayList<>();
         classList = new ArrayList<>();
@@ -64,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
         classList.add(StyleTestActivity.class);
         btnTitleList.add("Fragment测试");
         classList.add(FragmentTestMeActivity.class);
+        btnTitleList.add("正则表达式测试");
+        classList.add(RegexTestActivity.class);
     }
 
     private class GridAdapter extends BaseAdapter {

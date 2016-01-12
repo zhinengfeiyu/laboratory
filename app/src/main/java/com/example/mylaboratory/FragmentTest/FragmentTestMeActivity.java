@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.mylaboratory.R;
+import com.example.mylaboratory.ShapeTestActivity;
 
 /**
  * Created by ShineMo-177 on 2015/12/30.
@@ -53,10 +54,14 @@ public class FragmentTestMeActivity extends Activity {
         findViewById(R.id.undo).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                FragmentManager fm = getFragmentManager();
-                fm.popBackStack();
+//                FragmentManager fm = getFragmentManager();
+//                fm.popBackStack();
+                Intent i = new Intent(FragmentTestMeActivity.this, ShapeTestActivity.class);
+               // i.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(i);
             }
         });
+
     }
 
     public static class MyTestFragment extends Fragment {
@@ -175,5 +180,11 @@ public class FragmentTestMeActivity extends Activity {
     public void onDestroy() {
         super.onDestroy();
         Toast.makeText(getApplicationContext(), "Activity onDestroy", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onNewIntent(Intent i) {
+        super.onNewIntent(i);
+        Toast.makeText(getApplicationContext(), "FragmentTestMeActivity onNewIntent", Toast.LENGTH_SHORT).show();
     }
 }
