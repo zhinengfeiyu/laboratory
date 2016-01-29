@@ -50,12 +50,6 @@ public class MainActivity extends AppCompatActivity {
         gridView.setAdapter(new GridAdapter(this));
     }
 
-    @Override
-    protected void onNewIntent(Intent intent) {
-        super.onNewIntent(intent);
-        Toast.makeText(this, "MainActivity onNewIntent", Toast.LENGTH_LONG).show();
-    }
-
     private void initList() {
         btnTitleList = new ArrayList<>();
         classList = new ArrayList<>();

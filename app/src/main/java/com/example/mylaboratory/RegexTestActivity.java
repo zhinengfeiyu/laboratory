@@ -38,7 +38,7 @@ public class RegexTestActivity extends Activity {
                 Toast.makeText(getApplicationContext(), "验证完成！", Toast.LENGTH_SHORT).show();
                 String patternStr = patternEt.getText().toString();
                 String str = strEt.getText().toString();
-                Pattern pattern = Pattern.compile("\d{3}");
+                Pattern pattern = Pattern.compile("\\d{3}");
                 Matcher matcher = pattern.matcher(str);
                 if (matcher.find())
                     resultShowTv.setText("匹配成功！");

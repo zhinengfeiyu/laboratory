@@ -4,6 +4,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
+import android.view.ViewGroup;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 
 /**
@@ -11,17 +18,32 @@ import android.view.MotionEvent;
  */
 public class StyleTestActivity extends Activity {
 
+    WebView webView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.style_test_activity);
+
+        LinearLayout layout = (LinearLayout) findViewById(R.id.layout);
+
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        webView = new WebView(this);
+        webView.setLayoutParams(params);
+        layout.addView(webView);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("http://www.baidu.com");
+        WebSettings ws = webView.getSettings();
+        ws.setJavaScriptEnabled(true);
     }
 
     @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        Intent intent = new Intent(this, RegexTestActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
-        return true;
+    public void onBackPressed() {
+        if (webView.canGoBack()) {
+            webView.goBack();
+        }
+        else {
+            finish();
+        }
     }
 }
