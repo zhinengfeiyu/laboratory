@@ -40,5 +40,8 @@ public class BitmapTestActivity extends Activity {
 
     }
 
+    @MyBind(1)
+    public void testField() {
 
+    }
 }
