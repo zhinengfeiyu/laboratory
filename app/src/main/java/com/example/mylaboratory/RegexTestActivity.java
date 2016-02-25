@@ -35,18 +35,25 @@ public class RegexTestActivity extends Activity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "验证完成！", Toast.LENGTH_SHORT).show();
-                String patternStr = patternEt.getText().toString();
-                String str = strEt.getText().toString();
-                Pattern pattern = Pattern.compile("\\d{3}");
-                Matcher matcher = pattern.matcher(str);
-                if (matcher.find())
-                    resultShowTv.setText("匹配成功！");
-                else
-                    resultShowTv.setText("抱歉，匹配失败");
+//                Toast.makeText(getApplicationContext(), "验证完成！", Toast.LENGTH_SHORT).show();
+//                String patternStr = patternEt.getText().toString();
+//                String str = strEt.getText().toString();
+//                Pattern pattern = Pattern.compile("\\d{3}");
+//                Matcher matcher = pattern.matcher(str);
+//                if (matcher.find())
+//                    resultShowTv.setText("匹配成功！");
+//                else
+//                    resultShowTv.setText("抱歉，匹配失败");
+                startActivityForResult(new Intent(RegexTestActivity.this, StyleTestActivity.class), -1);
             }
         });
 
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+        Toast.makeText(this, requestCode+"", Toast.LENGTH_LONG).show();
     }
 
     @Override

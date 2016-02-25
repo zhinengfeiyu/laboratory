@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">实验室项目</string>
+    <string name="reference_str">我是一个引用的字符串</string>
+    <string name="quick">快点打字：</string>
 </resources>

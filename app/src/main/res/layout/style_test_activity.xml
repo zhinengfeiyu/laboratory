@@ -4,26 +4,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:layout_marginLeft="50dp"
-        android:text="这是没有style的情况"/>
-    <TextView
-        style="@style/TestStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="50dp"
-        android:text="这是使用style的情况"/>
+        android:text="这是没有style的情况" />
+
     <TextView
         style="@style/TestStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:layout_marginLeft="50dp"
-        android:textColor="@color/purple"
-        android:text="这是覆盖style的情况"/>
+        android:layout_marginTop="40dp"
+        android:text="这是使用style的情况" />
+
+    <TextView
+        style="@style/TestStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
+        android:text="这是覆盖style的情况"
+        android:textColor="@color/purple" />
 
 </LinearLayout>

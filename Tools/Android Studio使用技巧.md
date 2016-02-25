@@ -8,7 +8,7 @@ IDE原来的快捷键：
     复制文件在整个磁盘的绝对路径
 - CTRL+ALT+SHIFT+C <br>
     复制文件在当前项目的路径，即在绝对路径的基础上，把“项目名/”及以前的部分全部去掉
-- CTRL+F4 <br>
+- CTRL+F4 或 shift+单击窗口标题<br>
     关闭当前窗口
 - CTRL+SHIFT+F4 <br>
     关闭所有窗口
@@ -27,7 +27,14 @@ IDE原来的快捷键：
     在光标处所在行的下面新增一空白行，并把光标移到新行的行首，省去了先把光标移到当前行尾的操作
 - CTRL+ALT+ENTER <br>
     在光标处所在行的上面新增一空白行，并把光标移到新行的行首
-
+- CTRL+/ <br>
+    对每一行进行注释，既可以注释Java代码，也可以注释掉一段XML代码
+- CTRL+SHIFT+/ <br>
+    块注释，对Java和xml都有效
+- CTRL+ALT+L <br>
+    自动格式化代码
+- CTRL+ALT+O <br>
+    清除无效的import
 
 
 非常有用的页面跳转：
@@ -47,13 +54,16 @@ IDE原来的快捷键：
 - ALT+SHIFT+X <br>
     运行APP或当前类（根据具体选择）
 - ALT+SHIFT+D <br>
-    调试APP或当期类（根据具体选择） <br><br><br>
+    调试APP或当前类（根据具体选择） <br><br><br>
 - 双击SHIFT <br>
     全工程搜索
 - CTRL+SHIFT+R <br>
     按文件名打开文件
 - CTRL+E <br>
-    选择最近的文件的文件打开
+    打开最近浏览的文件
+- 在XML硬编码的字符串或尺寸值光标处 ALT+ENTER 统一到strings.xml或dimens.xml
+    
+
     
     
 Android Studio的类列表中，对于不同类文件的标识：

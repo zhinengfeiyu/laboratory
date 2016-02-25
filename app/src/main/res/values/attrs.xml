@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomAttr">
+        <attr name="tvText" format="string"/>
+        <attr name="etHint" format="string"/>
+        <attr name="etWidth" format="dimension"/>
+        <attr name="btnText" format="string" />
+    </declare-styleable>
+
+</resources>  
